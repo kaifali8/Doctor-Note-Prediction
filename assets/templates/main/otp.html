@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}OTP{% endblock title %}
+{% block content %}
+    <style>
+        .otp_container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .otp_box {
+            width: 50px;
+            height: 50px; 
+            font-size: 24px;
+            text-align: center;
+            margin-right: 2px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        
+        .otp_box:focus {
+            border-color: #57ccc3; 
+        }
+        
+    </style>
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">OTP</h1>
+                <a href="" class="h4 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">OTP</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Admin Login Start -->
+    <div class="container-fluid mt-5 py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-xl-6 col-lg-6 wow slideInLeft" data-wow-delay="0.3s">
+                    <img style="height: 500px;width: 500px;" src="{% static 'user/img/login.avif' %}" alt="">
+                </div>
+                <div class="col-xl-6 col-lg-6 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="bg-light rounded h-100 p-5">
+                        <h1 class="pb-4 text-center">Enter OTP</h1>
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="row g-4">
+                                <div class="d-flex flex-column" style="min-width: 470px;">
+                                    <div class="otp_container mt-5 mb-3">
+                                        <input type="text" class="otp_box" maxlength="1"  name="otp1">
+                                        <input type="text" class="otp_box" maxlength="1"  name="otp2">
+                                        <input type="text" class="otp_box" maxlength="1"  name="otp3">
+                                        <input type="text" class="otp_box" maxlength="1"  name="otp4">
+                                    </div>
+                                </div>                                    
+                                <div class="col-12 mt-5">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Verify</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Admi Login End -->
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+		const otpInputs = document.querySelectorAll('.otp_box');
+
+		otpInputs.forEach((input, index) => {
+			input.addEventListener('input', (e) => {
+				if (e.target.value.length === 1) {
+					const nextInput = otpInputs[index + 1];
+					if (nextInput) {
+						nextInput.focus();
+					}
+				}
+			});
+
+			input.addEventListener('keydown', (e) => {
+				if (e.key === 'Backspace' && !e.target.value) {
+					const previousInput = otpInputs[index - 1];
+					if (previousInput) {
+						previousInput.focus();
+					}
+				}
+			});
+		});
+	});
+
+      </script>
+{% endblock content%}

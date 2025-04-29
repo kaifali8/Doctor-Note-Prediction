@@ -1,0 +1,91 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Admin upload dataset{% endblock title %}
+{% block content %}
+<style>
+    .upload-container {
+        text-align: center;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        width: 350px;
+    }
+    .file-name {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: #333;
+        font-weight: bold;
+    }
+    .upload-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .upload-btn:hover {
+        background-color: #218838;
+    }
+    .custom-file-upload {
+        display: block;
+        border: 2px dashed #ddd;
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #555;
+        font-weight: 500;
+        background-color: #f9f9f9;
+    }
+    
+    .custom-file-upload:hover {
+        background-color: #e9ecef;
+        border-color: #007bff;
+        color: #007bff;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .custom-file-upload i {
+        font-size: 24px;
+        margin-right: 8px;
+    }
+</style>
+    <div class="p-4">
+        <div class="card p-4 shadow-sm " style="border-radius: 15px;">
+            <h5 class="card-header text-center" style="font-size: 1.8rem; font-weight: bold;">Upload Dataset</h5>
+            <hr style="height: 2px; background-color: #000; border: none; margin: 10px auto; width: 80%;">
+
+            <div class="table-responsive text-nowrap p-4 d-flex justify-content-center">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="upload-container">
+                        <div class="col-12">
+                                {% csrf_token %}
+                            <label for="uploadInput" class="custom-file-upload w-100">
+                                <i class="fa fa-cloud-upload-alt"></i> Choose dataset (.csv)
+                            </label>
+                            <input type="file" id="uploadInput" name="data_file" accept="csv/*" class="form-control d-none">
+                        </div>
+                        <div class="file-name" id="fileName">No file chosen</div>
+                        <button class="upload-btn" id="uploadBtn">Upload</button>
+                    </div>
+                </form>            
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('uploadInput').addEventListener('change', function() {
+            const fileName = this.files[0] ? this.files[0].name : "No file chosen";
+            document.getElementById('fileName').textContent = fileName;
+        });
+
+        document.getElementById('uploadBtn').addEventListener('click', function() {
+            alert("File uploaded successfully!"); // Replace this with actual upload logic
+        });
+    </script>
+{% endblock content %}

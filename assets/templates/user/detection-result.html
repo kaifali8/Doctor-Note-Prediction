@@ -1,0 +1,81 @@
+{% extends "base2.html" %}
+{% load static %}
+{% block title %}Detection Result{% endblock title %}
+{% block content %}
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Detection Result</h1>
+                <a href="" class="h4 text-white">Detection</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">Detection Result</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <!-- Main Container -->
+<div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+    
+    <!-- Left Section -->
+    <div class="d-flex flex-column" style="flex: 1; min-width: 300px;">
+        <div class="card p-4 mb-3 border-0 shadow-sm" style="background: #eef9ff; transition: transform 0.3s;">
+            <h3 class="fs-5 text-secondary">Algorithm Name:</h3>
+            <p class="fs-4 fw-bold text-primary">Decision Tree</p>
+        </div>
+        <div class="card p-4 mb-3 border-0 shadow-sm" style="background: #eef9ff; transition: transform 0.3s;">
+            <h3 class="fs-5 text-secondary">Algorithm Accuracy:</h3>
+            <p class="fs-4 fw-bold text-primary">90%</p>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="d-flex flex-column m-4" style="flex: 2; min-width: 400px;">
+    
+        <!-- Outcome Card -->
+        <div class="card p-4 mb-3 border-0 shadow-sm" 
+             style="background: #eef9ff; transition: transform 0.3s;">
+            <h2 class="fs-2 text-dark">Patient Condition: 
+                <span class="badge fs-5"
+                    style="
+                        background: 
+                            {% if predicted_outcome == 'Deterioration' %} #dc3545; /* Red */
+                            {% elif predicted_outcome == 'ICU transfer' %} #fd7e14; /* Orange */
+                            {% elif predicted_outcome == 'Improvement' %} #28a745; /* Green */
+                            {% elif predicted_outcome == 'Stable' %} #17a2b8; /* Blue */
+                            {% else %} #6c757d; /* Gray */
+                        {% endif %}
+                        color: white;">
+                    {{ predicted_outcome }}
+                </span>
+            </h2>
+        </div>
+    
+        <!-- Description Card -->
+        <div class="card p-4 mb-3 border-0 shadow-sm" 
+             style="background: #eef9ff; transition: transform 0.3s;">
+            <h3 class="fs-4 text-secondary">Explanation:</h3>
+            <p class="fs-5 text-muted" style="line-height: 1.5;">
+                {% if predicted_outcome == "Deterioration" %}
+                    The patient's condition is worsening, and there is a high risk of further decline. Immediate intervention and close monitoring are advised.
+                {% elif predicted_outcome == "ICU transfer" %}
+                    The patient's condition is critical, requiring ICU transfer. Intensive care and constant supervision are necessary.
+                {% elif predicted_outcome == "Improvement" %}
+                    The patient's health is showing positive progress. Continue with the current treatment plan and regular monitoring.
+                {% elif predicted_outcome == "Stable" %}
+                    The patient is stable with no significant changes. Regular check-ups are recommended to maintain their condition.
+                {% else %}
+                    The outcome is unknown. Further evaluation is required.
+                {% endif %}
+            </p>
+        </div>
+    
+    </div>
+</div>
+
+    
+
+{% endblock content%}

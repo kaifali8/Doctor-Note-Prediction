@@ -1,0 +1,58 @@
+{% extends "base2.html" %}
+{% load static %}
+{% block title %}Detection{% endblock title %}
+{% block content %}
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Detection</h1>
+                <a href="" class="h4 text-white">User</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">Detection</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5" style="align-items: center;">
+                <div class="col-xl-6 col-lg-6 wow slideInLeft" data-wow-delay="0.3s">
+                    <img style="height: 400px;" src="{% static "user/img/detect.jpg" %}" alt="">
+                </div>
+                <div class="col-xl-6 col-lg-6 wow slideInUp" data-wow-delay="0.1s">
+                    <div class="bg-light rounded h-100 p-5">
+                        <h1 class="pb-4 text-center">Detection</h1>
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="row g-4">
+                                <div class="rating col-12">
+                                    <label style="font-size: 18px;font-weight: bold;margin-bottom: 8px;" for="">&nbsp;&nbsp;Diagnosis</label>
+                                    <select class="form-control border-0 bg-white p-3" name="diagnosis">
+                                        <option value="" disabled selected hidden>&nbsp;Select Diagnosis 🔽</option>
+                                        <option value="Diabetes">Diabetes</option>
+                                        <option value="Heart Failure">Heart Failure</option>
+                                        <option value="Hypertension">Hypertension </option>
+                                        <option value="Pneumonia">Pneumonia</option>
+                                        <option value="Sepsis">Sepsis</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label style="font-size: 18px;font-weight: bold;margin-bottom: 8px;" for="">&nbsp;&nbsp;Doctor's Note</label>
+                                    <textarea class="form-control border-0 px-4 py-3" name="doctor_note" rows="5" placeholder="Enter Doctor's Note"></textarea>
+                                </div>                          
+                                <div class="col-12 mt-5">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Detect</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content%}

@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About{% endblock title %}
+{% block content %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">About Us</h1>
+                <a href="" class="h4 text-white">Home</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">About</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title mb-4">
+                        <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5>
+                        <h1 class="display-5 mb-0">Unlocking ICU Insights with NLP</h1>
+                    </div>
+                    <h4 class="text-body fst-italic mb-4">Transform unstructured clinical notes from Intensive Care Units into actionable insights using advanced NLP.</h4>
+                    <p class="mb-4">At ICU Insights, we are dedicated to transforming unstructured clinical notes from Intensive Care Units (ICUs) into meaningful insights using cutting-edge Natural Language Processing (NLP) techniques. Our platform empowers healthcare professionals by identifying hidden patterns, extracting key information, and enhancing decision-making processes.
+
+                        Our goal is to bridge the gap between raw clinical data and actionable knowledge, ultimately improving patient care and hospital efficiency. By leveraging advanced text analysis, we provide data-driven insights that support better clinical decisions and optimize ICU operations.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
+                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Cutting-Edge NLP Technology</h5>
+                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i> Healthcare-Focused Expertise</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
+                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i> Real-Time Analysis</h5>
+                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Data-Driven Accuracy</h5>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Know more</a>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{% static "user/img/about.jpg" %}" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+{% endblock content%}

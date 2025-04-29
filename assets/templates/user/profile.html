@@ -1,0 +1,150 @@
+{% extends "base2.html" %}
+{% load static %}
+{% block title %}Profile{% endblock title %}
+{% block content %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Profile</h1>
+                <a href="" class="h4 text-white">User</a>
+                <i class="far fa-circle text-white px-2"></i>
+                <a href="" class="h4 text-white">Profile</a>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="wow slideInUp" data-wow-delay="0.1s">
+                    <div class="bg-light rounded h-100 p-5">
+                        <h2 class="pb-4 text-center">Profile Info</h2>
+                        <form style="width: 100%;" id="userForm" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <!-- Move Image Upload Input Inside Form -->
+                            <div class="row g-4 align-items-start">
+                                <!-- Left Side: Image and Button -->
+                                <div class="col-md-4 d-flex flex-column align-items-center">
+                                    <!-- Profile Image -->
+                                    <div class="bg-light rounded p-4 d-flex flex-column align-items-center">
+                                        <div class="mb-4">
+                                            <img id="profileImage" src="{{ i.user_image.url }}" alt="Profile Picture"
+                                                class="rounded-circle"
+                                                style="width: 200px; height: 200px; object-fit: cover; border: 3px solid #00ff6e;">
+                                        </div>
+                                        <div class="mb-2">
+                                            <input name="profilepic" type="file" id="uploadInput" accept="image/*" class="form-control mb-3"
+                                                style="max-width: 250px;" name="profilepic" disabled>
+                                        </div>
+                                        <!-- Edit Info Button -->
+                                        <button type="button" class="btn w-100" style="color: white;background-color: blue;" onclick="toggleEdit()" id="toggleBtn">
+                                            Edit Info &nbsp;<i class="fa fa-solid fa-pen"></i>
+                                        </button>
+                        
+                                        <!-- Save Changes Button (Initially Hidden) -->
+                                        <div class="w-100 mt-3" id="saveChangesDiv" style="display: none;">
+                                            <button type="submit" class="btn btn-primary w-100">
+                                                Save Changes
+                                            </button>
+                                        </div>
+                                        <!-- Cancel Changes Button (Initially Hidden) -->
+                                        <div class="w-100 mt-3" id="cancelChangesDiv" style="display: none;">
+                                            <button type="button" class="btn w-100" style="background-color: black;color: white;">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Right Side: Form Fields -->
+                                <div class="col-md-8">
+                                    <div class="row g-3">
+                                        <div class="col-lg-6">
+                                            <p class="mt-2 black" style="color: black;">Username</p>
+                                            <input name="username" type="text" id="username" name="username" class="form-control border-0"
+                                                value="{{i.user_name}}" style="height: 55px;" disabled>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="mt-2 black" style="color: black;">Email</p>
+                                            <input name="email" type="email" id="email" name="email" class="form-control border-0"
+                                                value="{{i.user_email}}" style="height: 55px;" disabled>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="mt-2 black" style="color: black;">Age</p>
+                                            <input name="age" type="number" id="age" name="age" class="form-control border-0"
+                                                value="{{i.user_age}}" style="height: 55px;" disabled>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="mt-2 black" style="color: black;">Address</p>
+                                            <input name="address" type="text" id="address" name="address" class="form-control border-0"
+                                                value="{{i.user_address}}" style="height: 55px;" disabled>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="mt-2 black" style="color: black;">Phone no.</p>
+                                            <input name="mobile_number" type="text" id="mobile_number" name="mobile_number" class="form-control border-0"
+                                                value="{{i.user_contact}}" style="height: 55px;" disabled>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <p class="mt-2 black" style="color: black;">Password.</p>
+                                            <input name="password" type="text" id="password" name="password" class="form-control border-0"
+                                                value="{{i.user_password}}" style="height: 55px;" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Store initial values when the page loads
+        const initialValues = {};
+    
+        window.onload = function() {
+            const inputs = document.querySelectorAll('#userForm input');
+            inputs.forEach(input => {
+                initialValues[input.id] = input.value; // Store initial values
+            });
+        };
+    
+        function toggleEdit() {
+            // Enable all input fields
+            const inputs = document.querySelectorAll('#userForm input');
+            inputs.forEach(input => input.disabled = false);
+    
+            // Enable the image upload input field specifically
+            document.getElementById('uploadInput').disabled = false;
+    
+            // Show Save & Cancel buttons, hide Edit button
+            document.getElementById('saveChangesDiv').style.display = 'block';
+            document.getElementById('cancelChangesDiv').style.display = 'block';
+            document.getElementById('toggleBtn').style.display = 'none';
+        }
+    
+        function cancelEdit() {
+            // Revert all input values to their initial values
+            const inputs = document.querySelectorAll('#userForm input');
+            inputs.forEach(input => {
+                input.value = initialValues[input.id]; // Restore initial values
+                input.disabled = true; // Disable the inputs
+            });
+    
+            // Disable the image upload input
+            document.getElementById('uploadInput').disabled = true;
+    
+            // Hide Save & Cancel buttons, show Edit button
+            document.getElementById('saveChangesDiv').style.display = 'none';
+            document.getElementById('cancelChangesDiv').style.display = 'none';
+            document.getElementById('toggleBtn').style.display = 'block';
+        }
+    
+        // Attach the cancel function to the button
+        document.getElementById('cancelChangesDiv').addEventListener('click', cancelEdit);
+    </script>
+{% endblock content%}

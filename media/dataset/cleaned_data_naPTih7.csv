@@ -1,0 +1,141 @@
+Gender,Diagnosis,Symptoms,Treatments,Outcome,Doctor's Notes
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",Deterioration,patient observation procedure
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Stable,patient required intubation respiratory failure
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",ICU transfer,condition improving physiotherapy
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,patient critical condition monitoring closely
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Deterioration,sign infection adjust treatment regimen
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Stable,evaluation needed ongoing symptom
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,sign infection adjust treatment regimen
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,patient condition critical awaiting surgery
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Stable,condition stable monitor closely
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Deterioration,testing required determine cause
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Improvement,significant change continue current treatment
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient observation procedure
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,patient condition critical awaiting surgery
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,condition worsening monitor closely
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,requires immediate intervention deteriorating condition
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient condition critical awaiting surgery
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient showing significant improvement
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,patient discharged recovery
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient observation procedure
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,condition improving physiotherapy
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient discharged recovery
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient critical condition monitoring closely
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,continued observation recommended due unstable condition
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient required intubation respiratory failure
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,evaluation needed ongoing symptom
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,evaluation needed ongoing symptom
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,sign improvement medication
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient discharged recovery
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,continued observation recommended due unstable condition
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient showing minimal sign improvement
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,sign infection adjust treatment regimen
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,patient stable responding treatment
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,patient improved significantly surgery
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient improved significantly surgery
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,sign infection adjust treatment regimen
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,evaluation needed ongoing symptom
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,condition worsening monitor closely
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,patient showing minimal sign improvement
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient showing significant improvement
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient showing minimal sign improvement
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient discharged recovery
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,patient showing significant improvement
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,condition improving physiotherapy
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,patient showing significant improvement
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,condition worsening monitor closely
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,patient improved significantly surgery
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient discharged recovery
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient stable responding treatment
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient condition critical awaiting surgery
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient required intubation respiratory failure
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,continued observation recommended due unstable condition
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,sign improvement medication
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient responded well antibiotic stable condition
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,patient observation procedure
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,requires immediate intervention deteriorating condition
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,requires immediate intervention deteriorating condition
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient stable responding treatment
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,sign improvement medication
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,condition improving physiotherapy
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,sign infection adjust treatment regimen
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,patient responded well antibiotic stable condition
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient improved significantly surgery
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient critical condition monitoring closely
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient responded well antibiotic stable condition
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,condition improving physiotherapy
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient required intubation respiratory failure
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,condition deteriorating need additional care
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,condition deteriorating need additional care
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,testing required determine cause
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,condition worsening monitor closely
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,significant change continue current treatment
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,sign infection adjust treatment regimen
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,testing required determine cause
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient stable responding treatment
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,evaluation needed ongoing symptom
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient observation procedure
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,sign infection adjust treatment regimen
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,patient critical condition monitoring closely
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient critical condition monitoring closely
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient condition critical awaiting surgery
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,patient required intubation respiratory failure
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient showing significant improvement
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient critical condition monitoring closely
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient responded well antibiotic stable condition
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,patient discharged recovery
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,sign improvement medication
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient critical condition monitoring closely
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,condition deteriorating need additional care
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,continued observation recommended due unstable condition
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,requires immediate intervention deteriorating condition
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,sign improvement medication
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,condition deteriorating need additional care
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,evaluation needed ongoing symptom
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,continued observation recommended due unstable condition
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient improved significantly surgery
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,patient responded well antibiotic stable condition
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,condition improving physiotherapy
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,requires immediate intervention deteriorating condition
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,condition worsening monitor closely
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient improved significantly surgery
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,evaluation needed ongoing symptom
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient responded well antibiotic stable condition
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient stable responding treatment
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,patient showing minimal sign improvement
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,requires immediate intervention deteriorating condition
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,significant change continue current treatment
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,condition worsening monitor closely
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,patient stable responding treatment
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,condition improving physiotherapy
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient stable responding treatment
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient condition critical awaiting surgery
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient showing minimal sign improvement
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient required intubation respiratory failure
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient observation procedure
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient showing significant improvement
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,testing required determine cause
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,requires immediate intervention deteriorating condition
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,patient discharged recovery
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient required intubation respiratory failure
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,testing required determine cause
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,testing required determine cause
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,patient showing minimal sign improvement
+Male,Heart Failure,"Nausea, Fatigue, Swelling","Surgical intervention, Blood pressure medication",Deterioration,sign improvement medication
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,condition deteriorating need additional care
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,testing required determine cause
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient responded well antibiotic stable condition
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,condition deteriorating need additional care
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,continued observation recommended due unstable condition
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient condition critical awaiting surgery
+Female,Diabetes,"Swelling, Nausea, Shortness of breath",Anticoagulants,ICU transfer,significant change continue current treatment
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,condition deteriorating need additional care
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient observation procedure
+Male,Pneumonia,"Fatigue, Fever","Insulin therapy, Antibiotics, Surgical intervention",Stable,patient showing significant improvement
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,continued observation recommended due unstable condition
+Female,Sepsis,"Cough, Vomiting, Nausea","Intravenous fluids, Antibiotics",Improvement,significant change continue current treatment
+Female,Hypertension,"Dizziness, Fever","Mechanical ventilation, Insulin therapy",Improvement,patient showing minimal sign improvement
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,significant change continue current treatment
+Male,Heart Failure,"Swelling, Cough, Shortness of breath","Diuretics, Insulin therapy, Blood pressure medication",ICU transfer,sign improvement medication
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,significant change continue current treatment
+Male,Diabetes,"Cough, Dizziness","Blood pressure medication, Insulin therapy, Mechanical ventilation",Deterioration,patient improved significantly surgery

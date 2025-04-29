@@ -1,0 +1,48 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Sentiment Analysis{% endblock title%}
+{% block content %}
+          <div class="p-4">
+            <div class="card p-4 shadow-sm" style="border-radius: 15px;">
+                <h5 class="card-header" style="font-size: 1.8rem; font-weight: bold;">SENTIMENT ANALYSIS</h5>
+                <hr style="height: 2px; background-color: #000; border: none; margin: 10px auto; width: 100%;">
+                
+                <div class="table-responsive text-nowrap p-4">
+                    <table class="table text-center" style="border-collapse: separate; border-spacing: 0 10px;">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="padding: 12px; font-size: 1.1rem;">S.NO</th>
+                                <th style="padding: 12px; font-size: 1.1rem;">Username</th>
+                                <th style="padding: 12px; font-size: 1.1rem;">Rating</th>
+                                <th style="padding: 12px; font-size: 1.1rem;">Comments</th>
+                                <th style="padding: 12px; font-size: 1.1rem;">Status</th>
+                                <th style="padding: 12px; font-size: 1.1rem;">Emoji</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                            {% for i in cat %}
+                            <tr class="table-lite  text-center">
+                            <td><span class="feedback-text" style="color:#333;">{{ forloop.counter }}</span></td>
+                            <td><span class="feedback-text" style="color:#333;">{{ i.Reviewer.user_name }}</span></td>
+                            <td><span class="feedback-text" style="color:#333;">{{ i.Rating }}</span></td>
+                            <td><span class="feedback-text" style="color:#333;">{{ i.Review }}</span></td>
+                            <td><span class="feedback-text" style="color:#333;">{{ i.Sentiment }}</span></td> 
+                            {% if i.Sentiment == 'very positive' %}
+                                <td><img src="{% static 'admin/assets/img/icons/unicons/star.png' %}" style="height:50px; width:50px;" alt=" Very happy emoji"></td>
+                            {% elif i.Sentiment == 'positive' %}
+                                <td><img src="{% static 'admin/assets/img/icons/unicons/smile.png' %}" style="height:50px; width:50px;" alt="Happy emoji"></td>
+                            {% elif i.Sentiment == 'neutral' %}
+                                <td><img src="{% static 'admin/assets/img/icons/unicons/sad.png' %}" style="height:50px; width:50px;" alt="Neutral emoji"></td>
+                            {% elif i.Sentiment == 'negative' %}
+                                <td><img src="{% static 'admin/assets/img/icons/unicons/confused.png' %}" style="height:50px; width:50px;" alt="Negative emoji"></td>
+                            {% elif i.Sentiment == 'very negative' %}
+                                <td><img src="{% static 'admin/assets/img/icons/unicons/angry.png' %}" style="height:50px; width:50px;" alt="Negative emoji"></td>
+                            {% endif %}
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+{% endblock content%}

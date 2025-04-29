@@ -1,0 +1,23 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Multinomial NB{% endblock title%}
+{% block content %}
+        <!-- AdaBoost Section -->
+            <div class="p-4">
+                <div class="card">
+                    <h5 class="card-header text-center" style="font-size: 1.8rem; font-weight: bold;">Multinomial Naive Bayes (NB) Algorithm</h5>
+                    <hr style="height: 1px; background-color: #000; border: none; margin: 0 20px;">
+                    <div class="p-4 d-flex flex-column align-items-center rounded shadow-sm" style="background-color: #f8f9fa; border-radius: 15px;">
+                        <p style="font-size: 1.1rem; text-align: center; max-width: 80%;">
+                            Multinomial Naive Bayes is a probabilistic machine learning algorithm used for classification tasks, particularly effective for text classification and problems with discrete feature counts. It is based on Bayes' Theorem and assumes that the features are conditionally independent given the class label (naive assumption).
+                        </p>
+                        <a href="{% url 'multinomial_nb_result' %}">
+                            <button class="border-0 p-3 mt-2 bg-label-primary rounded custom-button" style="font-size: 1.1rem; border-radius: 10px; cursor: pointer;">
+                                Check Results
+                            </button>  
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <!-- AdaBoost Section End -->
+{% endblock content%}

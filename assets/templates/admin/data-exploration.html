@@ -1,0 +1,16 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Data Exploration{% endblock title %}
+{% block content %}
+
+<div class="p-4">
+    <div class="card">
+        <h4 class="card-header text-center"><b>Data Exploration</b></h4>
+        <hr style="height: 1px; background-color: #000; border: none; margin: 0 20px;">
+        <div class="table-responsive text-nowrap p-4 d-flex justify-content-center">
+            <img src="{{figure_img}}" alt="" style="height: 650px;">
+        </div>
+        <p class="text-center">Visualization generated using 1% sample of the original dataset (totaling over 63 Lakhs + records) to ensure efficient processing and clear representation</p>
+      </div>
+  </div>
+{% endblock content %}

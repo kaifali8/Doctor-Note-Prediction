@@ -1,0 +1,41 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Admin View Dataset Result{% endblock title %}
+{% block content %}
+<style>
+    .table-container {
+        margin-top: 20px;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+</style>
+<div class="p-4">
+    <div class="card">
+      <h5 class="card-header text-center"><b>View Dataset Result</b></h5>
+        <div class="table-responsive text-nowrap">
+            <div class="card-body">
+                <div class="table-container col-12 mx-auto" >
+                    <table class="table table-bordered" >
+                        {{ t | safe }}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

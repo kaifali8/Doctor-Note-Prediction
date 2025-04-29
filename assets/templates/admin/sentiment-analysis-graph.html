@@ -1,0 +1,87 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Sentiment Analysis Graph{% endblock title%}
+{% block content %}
+          <!-- Graph Section -->
+          <div class="p-4">
+            <div class="card">
+                <h5 class="card-header text-center" style="font-size: 1.8rem; font-weight: bold;">Sentiment Analysis Graph</h5>
+                <hr style="height: 2px; background-color: #000; border: none; margin: 0 20px;">
+                <div class="p-4 d-flex flex-column align-items-center rounded shadow-sm" style="background-color: #f8f9fa;">
+                    <div style="border-radius: 15px;height: 500px; width: 80%;">
+                        <canvas id="comparisonChart" width="100" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const ctx = document.getElementById('comparisonChart').getContext('2d');
+
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Very Positive', 'Positive', 'Neutral','Negative','Very Negative'],
+                datasets: [{
+                    label: 'Feedback Count',
+                    data: [{{vp}},{{p}},{{ne}},{{neg}},{{vn}}],
+                    backgroundColor: [
+                        'rgba(13, 115, 6, 0.5)',
+                        'rgba(33, 174, 22, 0.5)',
+                        'rgba(219, 250, 65, 0.5)',
+                        'rgba(255, 70, 3, 0.5)',
+                        'rgba(252, 3, 3, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(33, 174, 22, 1)',
+                        'rgba(165, 223, 223, 1)',
+                        'rgba(219, 250, 65, 1)',
+                        'rgba(255, 70, 3, 0.5)',
+                        'rgba(252, 3, 3, 0.5)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 5,
+                        title: {
+                            display: true,
+                            text: 'Feedback Count',
+                            color: 'black'
+                        },
+                        ticks: {
+                            color: 'black'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Models',
+                            color: 'black'
+                        },
+                        ticks: {
+                            color: 'black'
+                        },
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#333'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock content%}

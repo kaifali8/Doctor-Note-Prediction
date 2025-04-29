@@ -1,0 +1,101 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Comparison Graph{% endblock title%}
+{% block content %}
+          <!-- Graph Section -->
+          <div class="p-4">
+            <div class="card">
+                <h5 class="card-header text-center" style="font-size: 1.8rem; font-weight: bold;">Comparison Graph</h5>
+                <hr style="height: 2px; background-color: #000; border: none; margin: 0 20px;">
+                <div class="p-4 d-flex flex-column align-items-center rounded shadow-sm" style="background-color: #f8f9fa;">
+                    <div style="border-radius: 15px;height: 500px; width: 685px;">
+                        <canvas id="comparisonChart" width="100" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const ctx = document.getElementById('comparisonChart').getContext('2d');
+
+        // Parse JSON safely
+        var accuracyData = JSON.parse('{{ context_json|escapejs }}');
+        console.log("Accuracy Data:", accuracyData); // Debugging step
+
+        var dataValues = [
+            accuracyData.multinomial_nb_accuracy, 
+            accuracyData.logistic_accuracy, 
+            accuracyData.naive_bayes_accuracy, 
+            accuracyData.decision_accuracy, 
+            accuracyData.random_forest_accuracy
+        ];
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Multinomial NB', 'Logistic Regression', 'Naive Bayes', 'Decision Tree', 'Random Forest'],
+                datasets: [{
+                    label: 'Accuracy (%)',
+                    data: dataValues,
+                    backgroundColor: [
+                        'rgba(33, 174, 22, 0.5)',
+                        'rgba(165, 223, 223, 0.5)',
+                        'rgba(126, 138, 247, 0.5)',
+                        'rgba(247, 176, 126, 0.5)',
+                        'rgba(255, 99, 132, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(33, 174, 22, 1)',
+                        'rgba(165, 223, 223, 1)',
+                        'rgba(126, 138, 247, 1)',
+                        'rgba(247, 176, 126, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Accuracy (%)',
+                            color: 'black'
+                        },
+                        ticks: {
+                            color: 'black'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Models',
+                            color: 'black'
+                        },
+                        ticks: {
+                            color: 'black'
+                        },
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#333'
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+
+
+
+{% endblock content%}

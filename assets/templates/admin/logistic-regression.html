@@ -1,0 +1,23 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Logistic Regression{% endblock title%}
+{% block content %}
+        <!-- Logistic Regression Section -->
+            <div class="p-4">
+                <div class="card">
+                    <h5 class="card-header text-center" style="font-size: 1.8rem; font-weight: bold;">Logistic Regression Algorithm</h5>
+                    <hr style="height: 1px; background-color: #000; border: none; margin: 0 20px;">
+                    <div class="p-4 d-flex flex-column align-items-center rounded shadow-sm" style="background-color: #f8f9fa; border-radius: 15px;">
+                        <p style="font-size: 1.1rem; text-align: center; max-width: 80%;">
+                            Logistic Regression is a statistical method used for binary classification problems. It predicts the probability of an event occurring and is widely used in medical diagnosis, fraud detection, and customer churn analysis.
+                        </p>
+                        <a href="{% url 'logistic_regression_result' %}">
+                            <button class="border-0 p-3 mt-2 bg-label-primary rounded custom-button" style="font-size: 1.1rem; border-radius: 10px; cursor: pointer;">
+                                Check Results
+                            </button>  
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <!-- Logistic Regression Section End -->
+{% endblock content%}

@@ -1,0 +1,45 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Admin View{% endblock title%}
+{% block content %}
+          <!-- Table -->
+          <div class="p-4">
+            <div class="card">
+                <h4 class="card-header text-center"><b>View Dataset</b></h4>
+                <div class="table-responsive text-nowrap">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col"class="text-center">Dataset</th>
+                        <th scope="col"class="text-center">File Size</th>
+                        <th scope="col"class="text-center">Date & Time</th>
+                        <th scope="col"class="text-center">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                    {% for i in data %}
+                    <tr class="">
+                      <td class="text-center"><span style="color:#333;">{{i.dataset}}</span></td>
+                      <td class="text-center"><span style="color:#333;">{{i.file_size}}</span></td>
+                      <td class="text-center"><span style="color:#333;">{{i.uploaded_at}}</span></td>
+                      <td >
+                        <div class="d-flex align-items-center justify-content-center">
+                          <div class="mr-3" style="padding: 5px;"> <!-- Add margin-right class here -->
+                            <a href="{% url "admin_view_result" %}">
+                              <button  type="button" class="btn btn-primary btn-sm btn-icon-text accept-button">
+                                View Dataset <i class="fa fa-eye"></i>
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+          </div>
+          <!-- Table End -->
+{% endblock content%}
+  

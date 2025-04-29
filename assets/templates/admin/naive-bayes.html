@@ -1,0 +1,23 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Naive Bayes{% endblock title%}
+{% block content %}
+        <!-- LightGBM Section -->
+            <div class="p-4">
+                <div class="card">
+                    <h5 class="card-header text-center" style="font-size: 1.8rem; font-weight: bold;">Naive Bayes Algorithm</h5>
+                    <hr style="height: 1px; background-color: #000; border: none; margin: 0 20px;">
+                    <div class="p-4 d-flex flex-column align-items-center rounded shadow-sm" style="background-color: #f8f9fa; border-radius: 15px;">
+                        <p style="font-size: 1.1rem; text-align: center; max-width: 80%;">
+                            Naive Bayes (NB) is a probabilistic classification algorithm based on Bayes' Theorem, assuming that the features are conditionally independent given the class label (the naive assumption). Despite this simplistic assumption, it works remarkably well in text classification and spam filtering.
+                        </p>
+                        <a href="{% url 'naive_bayes_result' %}">
+                            <button class="border-0 p-3 mt-2 bg-label-primary rounded custom-button" style="font-size: 1.1rem; border-radius: 10px; cursor: pointer;">
+                                Check Results
+                            </button>  
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <!-- LightGBM Section End -->
+{% endblock content%}

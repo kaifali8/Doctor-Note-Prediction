@@ -1,0 +1,50 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Random Forest Result{% endblock title%}
+{% block content %}       
+          <div class="p-4">
+            <div class="card p-4 shadow-sm" style="border-radius: 15px;">
+                <h5 class="card-header text-center" style="font-size: 1.8rem; font-weight: bold;">Random Forest Algorithm RESULT</h5>
+                <hr style="height: 2px; background-color: #000; border: none; margin: 10px auto; width: 80%;">
+                
+                <div class="table-responsive text-nowrap p-4">
+                    <table class="table text-center" style="border-collapse: separate; border-spacing: 0 10px;">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="padding: 12px; font-size: 1.1rem;">S.NO</th>
+                                <th style="padding: 12px; font-size: 1.1rem;">Task</th>
+                                <th style="padding: 12px; font-size: 1.1rem;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                            <tr class="table-row">
+                                <td>1</td>
+                                <td>Name of Algorithm</td>
+                                <td>{{name}}</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>2</td>
+                                <td>Accuracy</td>
+                                <td>{{accuracy}}</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>3</td>
+                                <td>Precision</td>
+                                <td>{{precision}}</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>4</td>
+                                <td>F1 Score</td>
+                                <td>{{f1}}</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td>5</td>
+                                <td>Recall</td>
+                                <td>{{recall}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+{% endblock content%}

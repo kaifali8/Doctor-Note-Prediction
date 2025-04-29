@@ -1,0 +1,23 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}Decision Tree{% endblock title%}
+{% block content %}
+        <!-- Decision Tree Section -->
+            <div class="p-4">
+                <div class="card">
+                    <h5 class="card-header text-center" style="font-size: 1.8rem; font-weight: bold;">Decision Tree Algorithm</h5>
+                    <hr style="height: 1px; background-color: #000; border: none; margin: 0 20px;">
+                    <div class="p-4 d-flex flex-column align-items-center rounded shadow-sm" style="background-color: #f8f9fa; border-radius: 15px;">
+                        <p style="font-size: 1.1rem; text-align: center; max-width: 80%;">
+                            A Decision Tree is a supervised learning algorithm used for classification and regression tasks. It splits data into branches based on feature values, making decisions in a hierarchical structure. It is widely used due to its interpretability and effectiveness.
+                        </p>
+                        <a href="{% url 'decision_tree_result' %}">
+                            <button class="border-0 p-3 mt-2 bg-label-primary rounded custom-button" style="font-size: 1.1rem; border-radius: 10px; cursor: pointer;">
+                                Check Results
+                            </button>  
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <!-- Decision Tree Section End -->
+{% endblock content%}
